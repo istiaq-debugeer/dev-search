@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if page == 'update' %}
+    <h1>Update Skill</h1>
+    {% else %}
+    <h1>Created Skill</h1>
+    {% endif %}
+    <form method="POST"class="form-control" action="", enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="submit">
+    </form>
+{% endblock %}

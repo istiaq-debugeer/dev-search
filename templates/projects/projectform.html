@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <form class="form-control"method="POST">
+        {% csrf_token %}
+        {{ form.as_div }}
+        <input type="submit">
+    </form>
+{% endblock %}
