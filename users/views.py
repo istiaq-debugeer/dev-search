@@ -146,3 +146,5 @@ def deleteskill(request,pk):
         return redirect('/users/account')
     context={'object':skill}
     return render(request,'delete_template.html',context)
+
+
